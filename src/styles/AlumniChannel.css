@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.wrapper-rtl {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.item-rtl {
+  width: 300px;
+  height: 100px;
+  /* Light mode styling */
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  position: absolute;
+  left: max(calc(200px * 12), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode styling */
+.dark .item-rtl {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.15), 0 2px 4px -1px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effects for both themes */
+.item-rtl:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+.item-rtl:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark .item-rtl:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #f3f4f6;
+}
+
+.item-rtl1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item-rtl2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item-rtl3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item-rtl4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item-rtl5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item-rtl6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item-rtl7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item-rtl8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+.item-rtl9 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
