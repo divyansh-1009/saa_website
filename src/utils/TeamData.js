@@ -63,6 +63,15 @@ export const teamDataByYear = {
       mailto: 'mailto:b24mt1038@iitj.ac.in'
     },
     {
+      name: 'Divyansh Yadav',
+      position: 'Coordinator',
+      verticle: 'Technical',
+      img: div,
+      instagram: 'https://www.instagram.com/its_.divyansh10/',
+      linkedin: 'https://www.linkedin.com/in/divyansh-yadav-b17b2b328/',
+      mailto: 'mailto:b24cs1027@iitj.ac.in'
+    },
+    {
       name: 'Khushvendra Singh',
       position: 'Coordinator',
       verticle: 'ASMP',
@@ -115,15 +124,6 @@ export const teamDataByYear = {
       instagram: 'https://www.instagram.com/akhil_cipher/',
       linkedin: 'https://www.linkedin.com/in/akhil-dhyani-b39a37312/',
       mailto: 'mailto:b24cs1005@iitj.ac.in'
-    },
-    {
-      name: 'Divyansh Yadav',
-      position: 'Coordinator',
-      verticle: 'Technical',
-      img: div,
-      instagram: 'https://www.instagram.com/its_.divyansh10/',
-      linkedin: 'https://www.linkedin.com/in/divyansh-yadav-b17b2b328/',
-      mailto: 'mailto:b24cs1027@iitj.ac.in'
     }
   ],
   '2024': [
