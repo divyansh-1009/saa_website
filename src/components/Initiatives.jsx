@@ -23,6 +23,7 @@ import farewell_3 from '../assets/farewell_3.jpeg';
 import farewell_4 from '../assets/farewell_4.jpeg';
 import farewell_5 from '../assets/farewell_5.jpeg';
 import farewell_6 from '../assets/farewell_6.jpeg';
+import aid_1 from '../assets/aid_1.jpeg';
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -321,8 +322,8 @@ export default function Initiatives() {
     {
       title: "Alumni Induction Dinner",
       desc: "A special dinner welcoming graduating students into the alumni community, fostering connections and celebrating their journey.",
-      image: dashak_4,
-      images: [dashak_4, dashak_5, dashak_6],
+      image: aid_1,
+      images: [aid_1],
       fullDescription:
         "The Alumni Induction Dinner marks a significant milestone in every graduating student's journey, formally welcoming them into the prestigious IIT Jodhpur alumni community. This elegant dinner brings together graduating students, faculty, and alumni for an evening of celebration, reflection, and networking. Distinguished alumni speakers share their post-graduation experiences, while the ceremony officially inducts graduates into the alumni network. The event symbolizes the transition from student life to alumni status and celebrates the beginning of a lifelong association with the institute.",
       highlights: [
