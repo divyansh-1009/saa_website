@@ -26,7 +26,11 @@ import farewell_6 from '../assets/farewell_6.jpeg';
 import aid_1 from '../assets/aid_1.jpeg';
 import mi_1 from '../assets/mi_1.jpg';
 import legacy_1 from '../assets/legacy_1.png';
-
+import as_1 from '../assets/as_1.jpg';
+import as_2 from '../assets/as_2.jpg';
+import as_3 from '../assets/as_3.jpg';
+import as_4 from '../assets/as_4.jpg';
+import askal_1 from '..assets/askal_1.jpeg';
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentImageAspectRatio = useImageAspectRatio(images[currentIndex]);
