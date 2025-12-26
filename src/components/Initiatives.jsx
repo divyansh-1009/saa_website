@@ -342,10 +342,10 @@ export default function Initiatives() {
       ]
     },
     {
-      title: "Ask an Alumnus sessions",
+      title: "Ask an Alumnus Sessions",
       desc: "Interactive talks and networking opportunities where distinguished alumni share career insights, experiences, and guidance with current students.",
-      image: convocation_8,
-      images: [convocation_8, convocation_9, convocation_1],
+      image: as_1,
+      images: [as_1, as_2, as_3, as_4, askal_1],
       fullDescription:
         "Ask an Alumnus sessions provide a platform for distinguished alumni to share their professional journeys, career insights, and valuable experiences with current students. These interactive sessions cover diverse topics including industry trends, career planning, entrepreneurship, work-life balance, and overcoming professional challenges. Alumni speakers offer practical advice, answer student questions, and provide networking opportunities. The sessions bridge the gap between academic learning and professional reality, inspiring students and helping them make informed career decisions.",
       highlights: [
