@@ -24,6 +24,7 @@ import farewell_4 from '../assets/farewell_4.jpeg';
 import farewell_5 from '../assets/farewell_5.jpeg';
 import farewell_6 from '../assets/farewell_6.jpeg';
 import aid_1 from '../assets/aid_1.jpeg';
+import mi_1 from '../assets/mi_1.jpg';
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -242,8 +243,8 @@ export default function Initiatives() {
     {
       title: "Mock Interviews",
       desc: "Helping students prepare for placements and internships with realistic interview simulations by alumni and professionals.",
-      image: convocation_1,
-      images: [convocation_1, convocation_2, convocation_3],
+      image: mi_1,
+      images: [mi_1],
       fullDescription:
         "The Mock Interviews program provides students with realistic interview experiences conducted by alumni and industry professionals. Participants undergo comprehensive interview simulations that mirror actual placement and internship processes. The program covers technical interviews, behavioral questions, system design problems, and industry-specific scenarios. Alumni interviewers provide constructive feedback, tips for improvement, and insights into what employers look for in candidates. This hands-on preparation builds confidence and helps students perform better in real interviews.",
       highlights: [
