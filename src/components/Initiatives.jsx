@@ -25,6 +25,7 @@ import farewell_5 from '../assets/farewell_5.jpeg';
 import farewell_6 from '../assets/farewell_6.jpeg';
 import aid_1 from '../assets/aid_1.jpeg';
 import mi_1 from '../assets/mi_1.jpg';
+import legacy_1 from '../assets/legacy_1.png';
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -259,8 +260,8 @@ export default function Initiatives() {
     {
       title: "Legacy",
       desc: "A long-term impact program: caution depot, money donation, reading rooms, co-working spaces, and game rooms for the IITJ community.",
-      image: farewell_2,
-      images: [farewell_2, farewell_3, farewell_4],
+      image: legacy_1,
+      images: [legacy_1],
       fullDescription:
         "The Legacy program represents our commitment to giving back to the IIT Jodhpur community through sustainable impact initiatives. This comprehensive program includes establishing caution depots for emergency financial support, creating dedicated reading rooms and study spaces, developing modern co-working areas, and providing recreational facilities like game rooms. Alumni contributions fund these initiatives, ensuring that current and future students have access to resources that enhance their academic experience and overall well-being at the institute.",
       highlights: [
