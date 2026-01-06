@@ -39,7 +39,6 @@ import alt_6 from '../assets/alt_6.jpg';
 import alt_7 from '../assets/alt_7.jpg';
 import alt_8 from '../assets/alt_8.jpg';
 import alt_9 from '../assets/alt_9.jpg';
-import alt_10 from '../assets/alt_10.jpg';
 import alt_11 from '../assets/alt_11.jpg';
 import alt_12 from '../assets/alt_12.jpg';
 import alt_13 from '../assets/alt_13.jpg';
@@ -100,7 +99,6 @@ const IMAGE_MAP = {
   alt_7: alt_7,
   alt_8: alt_8,
   alt_9: alt_9,
-  alt_10: alt_10,
   alt_11: alt_11,
   alt_12: alt_12,
   alt_13: alt_13,
@@ -145,7 +143,7 @@ const galleryData = [
   {
     id: 'Institute',
     title: 'Institute',
-    images: ['alt_1','alt_2','alt_3','alt_4','alt_5','alt_6','alt_7','alt_8','alt_9','alt_10','alt_11','alt_12','alt_13','alt_14','alt_15','alt_16','alt_17','alt_18','alt_19','alt_20','alt_21','alt_22','alt_23','alt_24','alt_25','alt_26','alt_27','alt_28'],
+    images: ['alt_1','alt_2','alt_3','alt_4','alt_5','alt_6','alt_7','alt_8','alt_9','alt_11','alt_12','alt_13','alt_14','alt_15','alt_16','alt_17','alt_18','alt_19','alt_20','alt_21','alt_22','alt_23','alt_24','alt_25','alt_26','alt_27','alt_28'],
   },
 ];
 

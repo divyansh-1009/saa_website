@@ -4,9 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useImageAspectRatio } from '../hooks/useImageAspectRatio';
 import about1 from "../assets/alt_9.jpg";
-import about2 from "../assets/alt_10.jpg";
-import about3 from "../assets/alt_11.jpg";
-import about4 from "../assets/alt_12.jpg";
+import about2 from "../assets/alt_11.jpg";
+import about3 from "../assets/alt_12.jpg";
 
 const testimonials = [
   {
@@ -38,7 +37,7 @@ const testimonials = [
   }
 ];
 
-const carouselImages = [about1, about2, about3, about4];
+const carouselImages = [about1, about2, about3];
 
 export default function InternBridge() {
   const [currentCard, setCurrentCard] = useState(0);
