@@ -18,18 +18,20 @@ export default function Navbar() {
   const navigate=useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const [qaOpen, setQaOpen] = useState(false);
-  const qaRef = useRef(null);
-  const [communityOpen, setCommunityOpen] = useState(false);
-  const communityRef = useRef(null);
+  const [communityDesktopOpen, setCommunityDesktopOpen] = useState(false);
+  const [communityMobileOpen, setCommunityMobileOpen] = useState(false);
+  const communityDesktopRef = useRef(null);
   
-  useClickOutside(qaRef, () => setQaOpen(false));
   useClickOutside(menuRef, () => setMenuOpen(false));
-  useClickOutside(communityRef, () => setCommunityOpen(false));
+  useClickOutside(communityDesktopRef, () => setCommunityDesktopOpen(false));
   
   // Debug effect to see state changes
   useEffect(() => {
     console.log('menuOpen is now:', menuOpen);
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) setCommunityMobileOpen(false);
   }, [menuOpen]);
   
   return (
@@ -78,52 +80,52 @@ export default function Navbar() {
           to="/visitIITJ"
           className="text-gray-700 dark:text-neutral-300 bg-transparent hover:bg-gray-200/80 dark:hover:bg-black/30 border border-transparent hover:border-gray-300/50 dark:hover:border-white/20 px-3 py-1.5 rounded-full transition"
         >
-          VisitIITJ
+          Visit IITJ
         </Link>
         <div
           className="relative"
-          ref={communityRef}
+          ref={communityDesktopRef}
           onKeyDown={(e) => {
-            if (e.key === "Escape") setCommunityOpen(false);
+            if (e.key === "Escape") setCommunityDesktopOpen(false);
           }}
         >
           <button
             type="button"
-            onClick={() => setCommunityOpen((v) => !v)}
+            onClick={() => setCommunityDesktopOpen((prev) => !prev)}
             aria-haspopup="menu"
-            aria-expanded={communityOpen}
-            className={`text-gray-700 dark:text-neutral-300 bg-transparent hover:bg-gray-200/80 dark:hover:bg-black/30 border border-transparent hover:border-gray-300/50 dark:hover:border-white/20 px-3 py-1.5 rounded-full transition ${
-              communityOpen ? "bg-gray-200/80 dark:bg-black/30" : ""
+            aria-expanded={communityDesktopOpen}
+            className={`text-gray-700 dark:text-neutral-300 bg-transparent hover:bg-gray-200/80 dark:hover:bg-black/30 border border-transparent hover:border-gray-300/50 dark:hover:border-white/20 px-3 py-1.5 rounded-full transition flex items-start justify-start text-left leading-tight ${
+              communityDesktopOpen ? "bg-gray-200/80 dark:bg-black/30" : ""
             }`}
           >
             Community
           </button>
 
-          {communityOpen && (
+          {communityDesktopOpen && (
             <div
               role="menu"
               tabIndex={-1}
               className="absolute left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-xl ring-1 ring-black/5 dark:ring-white/10 p-1 z-50"
             >
               <a
-                href="https://alumni.iitj.ac.in"
+                href="https://alumni.iitj.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 role="menuitem"
                 tabIndex={0}
                 className="block w-full px-4 py-2.5 rounded-lg text-sm text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-zinc-800 transition"
-                onClick={() => setCommunityOpen(false)}
+                onClick={() => setCommunityDesktopOpen(false)}
               >
                 Alumni Portal
               </a>
               <a
-                href="https://www.iitj.ac.in"
+                href="https://www.iitj.ac.in/main/en/iitj"
                 target="_blank"
                 rel="noopener noreferrer"
                 role="menuitem"
                 tabIndex={0}
                 className="block w-full px-4 py-2.5 rounded-lg text-sm text-gray-800 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-zinc-800 transition"
-                onClick={() => setCommunityOpen(false)}
+                onClick={() => setCommunityDesktopOpen(false)}
               >
                 IIT Jodhpur
               </a>
@@ -198,7 +200,7 @@ export default function Navbar() {
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="p-1.5 xl:hidden rounded text-gray-700 dark:text-neutral-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/80 dark:hover:bg-black/30 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300 dark:focus:ring-white/20"
+            className="p-1.5 xl:hidden rounded text-gray-700 dark:text-neutral-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/80 dark:hover:bg-black/30 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300 dark:focus:ring-white/20 flex items-center justify-center"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             <svg
@@ -262,42 +264,42 @@ export default function Navbar() {
                     className="btn block p-1 hover:bg-gray-100 rounded-md dark:hover:text-red-400 dark:hover:bg-black/60 dark:text-white"
                     onClick={() => setMenuOpen(false)}
                   >
-                    VisitIITJ
+                    Visit IITJ
                   </Link>
                 </li>
                 <li className="relative">
                   <button
                     type="button"
-                    className="btn block w-full p-1 hover:bg-gray-100 rounded-md dark:hover:text-red-400 dark:hover:bg-black/60 dark:text-white"
-                    onClick={() => setCommunityOpen((v) => !v)}
+                    className="btn inline-flex w-full p-1 hover:bg-gray-100 rounded-md dark:hover:text-red-400 dark:hover:bg-black/60 dark:text-white items-center justify-center leading-tight"
+                    onClick={() => setCommunityMobileOpen((prev) => !prev)}
                   >
                     Community
                   </button>
-                  {communityOpen && (
-                    <div className="absolute left-0 top-full mt-1 transform -translate-x-full rounded-lg bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-lg ring-1 ring-black/5 dark:ring-white/10 p-1">
+                  {communityMobileOpen && (
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 rounded-lg bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-lg ring-1 ring-black/5 dark:ring-white/10 p-1 w-40 text-left">
                       <a
-                        href="https://alumni.iitj.ac.in"
+                        href="https://alumni.iitj.ac.in/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block px-3 py-2 text-xs hover:bg-gray-100 rounded-md dark:hover:text-red-400 dark:hover:bg-black/60 dark:text-white"
                         onClick={() => {
-                          setCommunityOpen(false);
+                          setCommunityMobileOpen(false);
                           setMenuOpen(false);
                         }}
                       >
                         Alumni Portal
                       </a>
                       <a
-                        href="https://www.iitj.ac.in"
+                        href="https://www.iitj.ac.in/main/en/iitj"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block px-3 py-2 text-xs hover:bg-gray-100 rounded-md dark:hover:text-red-400 dark:hover:bg-black/60 dark:text-white"
                         onClick={() => {
-                          setCommunityOpen(false);
+                          setCommunityMobileOpen(false);
                           setMenuOpen(false);
                         }}
                       >
-                        IIT Jodhpur
+                        IITJ
                       </a>
                     </div>
                   )}

@@ -121,8 +121,8 @@ const SAATeam = () => {
       <div className="py-6 sm:py-8 md:py-10 lg:py-12 px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 mx-auto max-w-screen-xl text-center relative overflow-hidden">
         
         {/* Header Section */}
-        <div className="relative z-10 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-          <h1 className="mb-3 sm:mb-4 md:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-gray-100 bg-gradient-to-r from-gray-900 to-blue-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent px-2 hover-underline-animation">
+        <div className="relative z-10 mb-8 sm:mb-12 md:mb-16 lg:mb-20 mt-8 sm:mt-4 md:mt-0">
+          <h1 className="mb-3 sm:mb-4 md:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white px-2 hover-underline-animation">
             SAA Team
           </h1>
    
